@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumit Kumar - Digital Creator</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-gray-300">
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Header & Navigation -->
+    <header class="relative z-10 py-6 px-4 md:px-12 flex justify-between items-center bg-transparent">
+        <div class="flex items-center space-x-2">
+            <svg class="w-8 h-8 text-indigo-400 animate-spin-slow" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zM5 10a1 1 0 011-1h4a1 1 0 110 2H6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            </svg>
+            <h1 class="text-2xl font-bold text-white">Sumit Kumar</h1>
+        </div>
+        <nav class="hidden md:flex space-x-8 text-gray-400 font-medium">
+            <a href="#about" class="hover:text-white transition duration-300 transform hover:-translate-y-1">About</a>
+            <a href="#work" class="hover:text-white transition duration-300 transform hover:-translate-y-1">What I Do</a>
+            <a href="#contact" class="hover:text-white transition duration-300 transform hover:-translate-y-1">Contact</a>
+        </nav>
+        <button id="menu-button" class="md:hidden text-gray-400 hover:text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 z-50 bg-black bg-opacity-95 flex flex-col items-center justify-center space-y-8 text-2xl font-bold transition-transform transform -translate-x-full">
+        <a href="#about" class="text-white hover:text-indigo-400 transition duration-300" onclick="closeMenu()">About</a>
+        <a href="#work" class="text-white hover:text-indigo-400 transition duration-300" onclick="closeMenu()">What I Do</a>
+        <a href="#contact" class="text-white hover:text-indigo-400 transition duration-300" onclick="closeMenu()">Contact</a>
+        <button class="absolute top-8 right-8 text-white" onclick="closeMenu()">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+    </div>
+
+    <main class="relative z-10 max-w-7xl mx-auto px-4 md:px-12 py-16 opacity-0 transition-opacity duration-1000" id="main-content">
+
+        <!-- Hero Section -->
+        <section class="min-h-screen flex flex-col md:flex-row items-center justify-center text-center md:text-left space-y-12 md:space-x-12 pt-16 md:pt-0">
+            <div class="md:w-1/2 animate-on-scroll">
+                <h2 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+                    Hello, I'm <span class="gradient-text text-shadow-lg">Sumit Kumar</span>
+                </h2>
+                <p class="mt-4 text-xl md:text-2xl font-medium text-gray-300">
+                    <span id="profession-text" class="typing-effect"></span>
+                </p>
+                <div class="mt-8">
+                    <a href="#contact" class="inline-block px-8 py-3 bg-indigo-600 text-white font-bold rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-105 animate-pulse-slow">
+                        Let's Connect
+                    </a>
+                </div>
+            </div>
+            <!-- Image for Sumit Kumar -->
+            <img src="sumit.jpg" alt="Profile picture of Sumit Kumar" class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-indigo-600 shadow-2xl animate-on-scroll animate-float" onerror="this.onerror=null;this.src='https://placehold.co/320x320/2d3748/a0aec0?text=Image+Unavailable';" />
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 animate-on-scroll">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">About Me</h2>
+            <div class="bg-gray-800 p-8 md:p-12 rounded-2xl shadow-lg border border-gray-700">
+                <div class="flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12">
+                    <div class="md:w-1/2 text-lg leading-relaxed">
+                        <p class="mb-4">
+                            My name is Sumit Kumar, and I am a 17-year-old from Lakhisrai, Bihar. I am passionate about exploring the digital world and its endless possibilities.
+                        </p>
+                        <p class="mb-4">
+                            I recently completed my 12th class in 2025 and am now fully focused on diving deep into new technologies and the exciting field of artificial intelligence. My curiosity drives me to constantly learn and grow.
+                        </p>
+                        <p>
+                            I thrive on challenges and believe that every obstacle is an opportunity to learn something new. My goal is to build, create, and inspire through my work as a digital creator.
+                        </p>
+                    </div>
+                    <!-- Another image placeholder to match the reference image -->
+                    <div class="relative w-full h-64 md:h-80 rounded-xl overflow-hidden bg-gray-700 border border-gray-600 shadow-lg md:w-1/2">
+    <img src="sumit_2.jpg" alt="Profile picture of Sumit Kumar" style="width:100%;height:100%;object-fit:cover;" onerror="this.onerror=null;this.src='https://placehold.co/320x320/2d3748/a0aec0?text=Image+Unavailable';" />
+</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What I Do Section -->
+        <section id="work" class="py-20">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12 animate-on-scroll">What I Do</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg flex flex-col items-center text-center border border-gray-700 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 work-card-hover animate-on-scroll">
+                    <svg class="w-16 h-16 mb-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.5v15m7.5-7.5h-15"></path>
+                    </svg>
+                    <h3 class="text-xl font-bold text-white mb-2">Digital Influencer</h3>
+                    <p class="text-gray-400">Engaging with my audience and sharing my journey on various platforms.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg flex flex-col items-center text-center border border-gray-700 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 work-card-hover animate-on-scroll">
+                    <svg class="w-16 h-16 mb-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M16 12a4 4 0 01-8 0v-2a4 4 0 018 0v2z"></path>
+                    </svg>
+                    <h3 class="text-xl font-bold text-white mb-2">Content Creator</h3>
+                    <p class="text-gray-400">Producing creative and meaningful content across different media.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg flex flex-col items-center text-center border border-gray-700 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 work-card-hover animate-on-scroll">
+                    <svg class="w-16 h-16 mb-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1 1 0 01-1.414 0l-4.243-4.243a8 8 0 1111.314 0z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    <h3 class="text-xl font-bold text-white mb-2">Youtuber & Gamer</h3>
+                    <p class="text-gray-400">Sharing gaming experiences and tutorials with a growing community.</p>
+                </div>
+                 <!-- Card 4 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg flex flex-col items-center text-center border border-gray-700 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 work-card-hover animate-on-scroll">
+                    <svg class="w-16 h-16 mb-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.983 5.786V20.5a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-4.136c0-2.404.98-4.707 2.72-6.447L12 14z"></path>
+                    </svg>
+                    <h3 class="text-xl font-bold text-white mb-2">Traveller</h3>
+                    <p class="text-gray-400">Documenting my journeys and sharing unique travel experiences.</p>
+                </div>
+                 <!-- Card 5 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg flex flex-col items-center text-center border border-gray-700 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 work-card-hover animate-on-scroll">
+                    <svg class="w-16 h-16 mb-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                    <h3 class="text-xl font-bold text-white mb-2">Self-Growth Enthusiast</h3>
+                    <p class="text-gray-400">Committed to personal development and continuous learning.</p>
+                </div>
+                 <!-- Card 6 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg flex flex-col items-center text-center border border-gray-700 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 work-card-hover animate-on-scroll">
+                    <svg class="w-16 h-16 mb-4 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9h6"></path>
+                    </svg>
+                    <h3 class="text-xl font-bold text-white mb-2">Exploring AI & Tech</h3>
+                    <p class="text-gray-400">Keeping up with the latest advancements in technology and AI.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 animate-on-scroll">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">Get In Touch</h2>
+            <div class="bg-gray-800 p-8 md:p-12 rounded-2xl shadow-lg flex flex-col items-center text-center border border-gray-700">
+                <p class="text-lg text-gray-300 mb-6">Let's connect and create something amazing!</p>
+                <div class="flex space-x-6 md:space-x-12 items-center">
+                    <!-- YouTube Icon -->
+                    <a href="https://www.youtube.com/@sumitgaminyt" target="_blank" rel="noopener noreferrer" class="social-icon">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M19.615 3.184c-1.125-.306-2.91.077-4.148.514-1.238.437-2.617.728-3.967.728s-2.73-.291-3.967-.728c-1.238-.437-3.023-.82-4.148-.514C2.128 3.51 1 4.793 1 6.516v10.967c0 1.723 1.128 3.006 2.405 3.332 1.125.306 2.91-.077 4.148-.514 1.238-.437 2.617-.728 3.967-.728s2.73.291 3.967.728c1.238.437 3.023.82 4.148.514 1.277-.326 2.405-1.609 2.405-3.332V6.516c0-1.723-1.128-3.006-2.405-3.332zM9.99 15.029v-6.059l4.512 3.03-4.512 3.03z"></path>
+                        </svg>
+                    </a>
+                    <!-- Instagram Icon -->
+                    <a href="https://www.instagram.com/sumit.kumar.sharma_" target="_blank" rel="noopener noreferrer" class="social-icon">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2c2.716 0 3.056.012 4.123.064 1.066.052 1.78.232 2.383.475a4.237 4.237 0 011.666 1.054A4.237 4.237 0 0121.46 5.39a4.237 4.237 0 011.054 1.667c.243.603.423 1.317.475 2.383.052 1.066.064 1.407.064 4.123s-.012 3.056-.064 4.123c-.052 1.066-.232 1.78-.475 2.383a4.237 4.237 0 01-1.054 1.666 4.237 4.237 0 01-1.667 1.054c-.603.243-1.317.423-2.383.475-1.066.052-1.407.064-4.123.064s-3.056-.012-4.123-.064c-1.066-.052-1.78-.232-2.383-.475a4.237 4.237 0 01-1.666-1.054 4.237 4.237 0 01-1.054-1.667c-.243-.603-.423-1.317-.475-2.383-.052-1.066-.064-1.407-.064-4.123s.012-3.056.064-4.123c.052-1.066.232-1.78.475-2.383A4.237 4.237 0 015.39 2.54c.603-.243 1.317-.423 2.383-.475C8.847 2.012 9.188 2 12 2zm0 2.27c-2.617 0-2.94.01-3.957.06-1.018.05-1.626.22-2.09.41a2.128 2.128 0 00-.814.536 2.128 2.128 0 00-.536.814c-.19.464-.36 1.072-.41 2.09-.05 1.018-.06 1.34-.06 3.957s.01 2.94.06 3.957c.05 1.018.22 1.626.41 2.09a2.128 2.128 0 00.536.814 2.128 2.128 0 00.814.536c.464.19 1.072.36 2.09.41 1.018.05 1.34.06 3.957.06s2.94-.01 3.957-.06c1.018-.05 1.626-.22 2.09-.41a2.128 2.128 0 00.814-.536 2.128 2.128 0 00.536-.814c.19-.464.36-1.072.41-2.09.05-1.018.06-1.34.06-3.957s-.01-2.94-.06-3.957c-.05-1.018-.22-1.626-.41-2.09a2.128 2.128 0 00-.536-.814 2.128 2.128 0 00-.814-.536c-.464-.19-1.072-.36-2.09-.41-1.018-.05-1.34-.06-3.957-.06zm0 3.65c-2.316 0-4.195 1.879-4.195 4.195s1.879 4.195 4.195 4.195 4.195-1.879 4.195-4.195-1.879-4.195-4.195-4.195zm0 1.6c1.43 0 2.595 1.165 2.595 2.595s-1.165 2.595-2.595 2.595-2.595-1.165-2.595-2.595 1.165-2.595 2.595-2.595z"></path>
+                        </svg>
+                    </a>
+                    <!-- Email Icon -->
+                    <a href="mailto:ssumit62050@gmail.com" class="social-icon">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884zM18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Particles.js library -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Custom script file -->
+    <script src="script.js"></script>
+</body>
+</html>
