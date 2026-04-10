@@ -8,12 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <div id="particles-js" aria-hidden="true"></div>
     <div class="ocean-glow ocean-glow-1" aria-hidden="true"></div>
     <div class="ocean-glow ocean-glow-2" aria-hidden="true"></div>
+    <div class="ocean-glow ocean-glow-3" aria-hidden="true"></div>
     <div class="scroll-progress" id="scroll-progress"></div>
 
     <header class="site-header">
@@ -26,6 +27,7 @@
             <nav class="desktop-nav" aria-label="Primary navigation">
                 <a href="#about">About</a>
                 <a href="#journey">Journey</a>
+                <a href="#gallery">Gallery</a>
                 <a href="#strengths">Strengths</a>
                 <a href="#contact">Contact</a>
             </nav>
@@ -43,6 +45,7 @@
         <nav class="mobile-nav">
             <a href="#about">About</a>
             <a href="#journey">Journey</a>
+            <a href="#gallery">Gallery</a>
             <a href="#strengths">Strengths</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -61,6 +64,12 @@
                         Currently pursuing Diploma in Nautical Science (DNS) at IMI Noida, with sponsorship from Fleet Management.
                         My path is centered on discipline, seamanship, and leadership for life at sea.
                     </p>
+
+                    <div class="hero-badges reveal" data-delay="70">
+                        <span>DNS | IMI Noida</span>
+                        <span>Fleet Management Sponsored</span>
+                        <span>Safety and Leadership Focused</span>
+                    </div>
 
                     <p class="typing-line">
                         <span class="typing-label">Current Focus:</span>
@@ -90,8 +99,9 @@
 
                 <figure class="hero-visual reveal" data-delay="120">
                     <div class="portrait-shell">
-                        <img src="sumit.jpg" alt="Portrait of Sumit Kumar" onerror="this.onerror=null;this.src='https://placehold.co/560x700/0d2338/99afc4?text=Image+Unavailable';">
+                        <img src="assets/images/sumit.jpg" alt="Portrait of Sumit Kumar" onerror="this.onerror=null;this.src='https://placehold.co/560x700/0d2338/99afc4?text=Image+Unavailable';">
                     </div>
+                    <span class="floating-chip">Built for the Bridge</span>
                     <figcaption>Anchored in purpose. Training for open waters.</figcaption>
                 </figure>
             </div>
@@ -117,7 +127,7 @@
                 </div>
 
                 <aside class="about-card reveal" data-delay="100">
-                    <img src="sumit_2.jpg" alt="Sumit Kumar profile photo" onerror="this.onerror=null;this.src='https://placehold.co/520x580/0d2338/99afc4?text=Image+Unavailable';">
+                    <img src="assets/images/sumit_2.jpg" alt="Sumit Kumar profile photo" onerror="this.onerror=null;this.src='https://placehold.co/520x580/0d2338/99afc4?text=Image+Unavailable';">
                     <ul class="fact-list">
                         <li>
                             <span>Home Base</span>
@@ -175,6 +185,50 @@
                         <span class="year">Next</span>
                         <p>Progressing toward sea-time experience and officer-level responsibility.</p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section reveal">
+            <div class="container">
+                <p class="kicker">Sea Vision</p>
+                <h2>Maritime visual diary and inspiration.</h2>
+                <p class="section-intro">
+                    A curated set of visuals that reflect the scale, discipline, and spirit of life connected to the sea.
+                </p>
+
+                <div class="gallery-grid">
+                    <article class="gallery-card reveal tilt-card" data-delay="60" data-parallax="7">
+                        <img src="assets/images/download-2.jpg" alt="Maritime scene representing training environment" onerror="this.onerror=null;this.src='https://placehold.co/640x640/0d2338/99afc4?text=Image+Unavailable';">
+                        <div class="gallery-overlay">
+                            <h3>Training Environment</h3>
+                            <p>Staying prepared for responsibility, routine, and real-world deck challenges.</p>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card reveal tilt-card" data-delay="110" data-parallax="9">
+                        <img src="assets/images/download-3.jpg" alt="Oceanfront visual connected to maritime journey" onerror="this.onerror=null;this.src='https://placehold.co/640x640/0d2338/99afc4?text=Image+Unavailable';">
+                        <div class="gallery-overlay">
+                            <h3>Seafarer Mindset</h3>
+                            <p>Composure, awareness, and confidence in changing marine conditions.</p>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card reveal tilt-card" data-delay="160" data-parallax="8">
+                        <img src="assets/images/dr-alfred-cx.jpg" alt="Leadership portrait visual used as inspiration" onerror="this.onerror=null;this.src='https://placehold.co/640x640/0d2338/99afc4?text=Image+Unavailable';">
+                        <div class="gallery-overlay">
+                            <h3>Leadership Inspiration</h3>
+                            <p>Learning from strong examples of discipline, purpose, and commitment.</p>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card reveal tilt-card" data-delay="210" data-parallax="10">
+                        <img src="assets/images/istockphoto-480550176-612x612.jpg" alt="Commercial vessel image representing merchant navy operations" onerror="this.onerror=null;this.src='https://placehold.co/640x640/0d2338/99afc4?text=Image+Unavailable';">
+                        <div class="gallery-overlay">
+                            <h3>Merchant Fleet Vision</h3>
+                            <p>Inspired by the scale and precision of global maritime operations.</p>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -238,6 +292,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

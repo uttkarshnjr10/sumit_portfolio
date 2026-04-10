@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const hasFinePointer = window.matchMedia('(pointer: fine)').matches;
 
     const menuButton = document.getElementById('menu-button');
     const closeMenuButton = document.getElementById('close-menu');
@@ -7,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileLinks = document.querySelectorAll('.mobile-nav a');
     const backToTopButton = document.getElementById('back-to-top');
     const progressBar = document.getElementById('scroll-progress');
-    const portraitShell = document.querySelector('.portrait-shell');
 
     const openMenu = () => {
         if (!mobileMenu || !menuButton) {
@@ -61,6 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 980) {
+            closeMenu();
+        }
+    });
+
     const revealItems = document.querySelectorAll('.reveal');
     if (prefersReducedMotion) {
         revealItems.forEach((item) => item.classList.add('visible'));
@@ -92,7 +98,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const labels = [
             'DNS Cadet at IMI Noida',
             'Fleet Management Sponsored Trainee',
-            'Future Merchant Navy Deck Officer'
+            'Future Merchant Navy Deck Officer',
+            'Seamanship and Bridge Leadership'
         ];
 
         let labelIndex = 0;
@@ -180,17 +187,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    if (portraitShell && !prefersReducedMotion) {
-        window.addEventListener('mousemove', (event) => {
-            if (window.innerWidth < 980) {
-                portraitShell.style.transform = '';
-                return;
-            }
+    if (!prefersReducedMotion && hasFinePointer) {
+        const tiltCards = document.querySelectorAll('.tilt-card');
 
-            const xRatio = (event.clientX / window.innerWidth - 0.5) * 2;
-            const yRatio = (event.clientY / window.innerHeight - 0.5) * 2;
+        tiltCards.forEach((card) => {
+            card.addEventListener('pointermove', (event) => {
+                const rect = card.getBoundingClientRect();
+                const x = event.clientX - rect.left;
+                const y = event.clientY - rect.top;
+                const xPercent = (x / rect.width - 0.5) * 2;
+                const yPercent = (y / rect.height - 0.5) * 2;
+                const intensity = Number(card.getAttribute('data-parallax') || 8);
 
-            portraitShell.style.transform = `translate3d(${xRatio * 8}px, ${yRatio * 6}px, 0)`;
+                card.style.setProperty('--tilt-x', `${-yPercent * (intensity * 0.35)}deg`);
+                card.style.setProperty('--tilt-y', `${xPercent * (intensity * 0.35)}deg`);
+                card.style.setProperty('--lift', '-6px');
+            });
+
+            card.addEventListener('pointerleave', () => {
+                card.style.setProperty('--tilt-x', '0deg');
+                card.style.setProperty('--tilt-y', '0deg');
+                card.style.setProperty('--lift', '0px');
+            });
         });
     }
 
@@ -207,7 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 },
                 color: {
-                    value: ['#5ab4dd', '#f3bb6b', '#9dd6f0']
+                    value: ['#56b8dd', '#f0bf77', '#71d9c7']
                 },
                 shape: {
                     type: 'circle'
@@ -223,13 +241,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 line_linked: {
                     enable: true,
                     distance: 148,
-                    color: '#4a90ba',
-                    opacity: 0.24,
+                    color: '#56b8dd',
+                    opacity: 0.26,
                     width: 1
                 },
                 move: {
                     enable: true,
-                    speed: 1.8,
+                    speed: 1.9,
                     direction: 'none',
                     out_mode: 'out',
                     random: false,
@@ -251,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 modes: {
                     repulse: {
-                        distance: 90,
+                        distance: 95,
                         duration: 0.45
                     },
                     push: {
